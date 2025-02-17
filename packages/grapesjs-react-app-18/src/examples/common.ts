@@ -90,9 +90,15 @@ export const slowStoragePlugin: Plugin = editor => {
 };
 
 export const defaultEditorProps: EditorProps = {
+  // Pass the core GrapesJS library to the wrapper (required).
+  // You can also pass the CDN url (eg. "https://unpkg.com/grapesjs")
   grapesjs: window.grapesjs,
-  grapesjsCss: 'http://localhost:8080/dist/css/grapes.min.css',
+  // Load the GrapesJS CSS file asynchronously from URL.
+  // This is an optional prop, you can always import the CSS directly in your JS if you wish.
+  // grapesjsCss: 'http://localhost:8080/dist/css/grapes.min.css',
+  grapesjsCss: 'https://unpkg.com/grapesjs/dist/css/grapes.min.css',
   plugins: plugins,
+  // GrapesJS init options
   options: defaultOptions
 };
 
