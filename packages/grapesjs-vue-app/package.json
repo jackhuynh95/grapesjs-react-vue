@@ -1,0 +1,53 @@
+{
+  "name": "@grapesjs/vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "files" : [ "dist" ],
+  "main" : "./dist/@grapesjs/vue-app.umd.js",
+  "module" : "./dist/@grapesjs/vue-app.es.js",
+  "type" : "module",
+  "exports" : { 
+      "." : { 
+          "import" : "./dist/@grapesjs/vue-app.js"
+      },
+      "./dist/index.css" : { 
+          "import" : "./dist/style.css"
+      },
+      "./dist/" : { 
+          "import" : "./dist/"
+      }
+  },
+  "types" : "./dist/index.d.ts",
+  "scripts" : { 
+      "dev" : "vite --port 3000 --mode development",
+      "start" : "vite --port 3000 --mode production",
+      "build" : "rimraf build && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+      "preview" : "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
+    "@mui/material": "^5.13.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies" : {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-vue" : "^5.0.4",
+    "copyfiles" : "^2.4.1",
+    "dts-bundle-generator" : "^9.5.1",
+    "rimraf" : "^6.0.1",
+    "typescript" : "^5.2.2",
+    "vite" : "^5.2.0",
+    "vue" : "^3.4.21",
+    "vue-tsc" : "^2.0.6",
+    "mitt" : "^3.0.1"
+  },
+  "resolutions": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
