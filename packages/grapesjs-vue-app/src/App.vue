@@ -20,6 +20,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 // } from "./WebEditor";
 //#endregion
 //#region [Switching between Development and Production][NEW]
+import './index.css';
 import * as moduleDevelopment from './WebEditor';
 
 let mountEditor, unmountEditor, submitEditor, eventBusEditor;

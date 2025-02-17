@@ -18,8 +18,11 @@
     "strict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    
+    /* Vite types */
+    "types": ["vite/client"], // Include Vite types for ImportMeta
   },
-  "include": ["src"],
+  "include": ["src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
