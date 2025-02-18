@@ -20,7 +20,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 // } from "./WebEditor";
 //#endregion
 //#region [Switching between Development and Production][NEW]
-import './index.css';
 import * as moduleDevelopment from './WebEditor';
 
 let mountEditor, unmountEditor, submitEditor, eventBusEditor;
@@ -34,9 +33,9 @@ const loadEditorModule = async () => {
   submitEditor = module.submitEditor;
   eventBusEditor = module.eventBus;
 
-  // if (import.meta.env.MODE === 'production') {
-  //   import('../build/dist/style.css');
-  // }
+  if (import.meta.env.MODE === 'production') {
+    import('../build/dist/style.css');
+  }
 };
 //#endregion
 

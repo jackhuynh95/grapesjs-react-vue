@@ -9,6 +9,8 @@ import EditorWaitReady from './EditorWaitReady';
 import { getDateString } from './common';
 import DefaultCustomEditor from './DefaultCustomEditor';
 
+import '../../index.css';
+
 enum Examples {
   Default = 'Default UI Editor',
   Custom = 'Custom UI Editor',
