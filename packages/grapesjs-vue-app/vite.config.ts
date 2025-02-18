@@ -20,8 +20,11 @@ if (fs.existsSync(`${dirCwd}/${indexDev}`)) {
 const copyGrapesjsReactPlugin = {
   name: 'copy-grapesjs-react',
   buildStart() {
-    const sourcePath = path.resolve(__dirname, '../grapesjs-react/dist');
+    const sourcePathDist = path.resolve(__dirname, '../grapesjs-react/dist');
+    const sourcePathPkg = path.resolve(__dirname, '../grapesjs-react/package.json');
     const destPath = path.resolve(__dirname, 'node_modules/@grapesjs/react');
+    const destPathDist = path.join(destPath, '/dist');
+    const destPathPkg = path.join(destPath, 'package.json');
     
     // Remove the destination directory to clean up the cache
     if (fs.existsSync(destPath)) {
@@ -30,8 +33,12 @@ const copyGrapesjsReactPlugin = {
     }
     
     // Copy the files
-    copySync(sourcePath, destPath, { overwrite: true });
+    copySync(sourcePathDist, destPathDist, { overwrite: true });
     console.log('Copied @grapesjs/react files');
+
+    // Copy the package.json file
+    copySync(sourcePathPkg, destPathPkg, { overwrite: true });
+    console.log('Copied @grapesjs/react package.json to:', destPathPkg);
   },
 };
 
