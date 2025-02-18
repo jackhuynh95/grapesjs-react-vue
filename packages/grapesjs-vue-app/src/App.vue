@@ -26,7 +26,8 @@ import * as moduleDevelopment from './WebEditor';
 let mountEditor, unmountEditor, submitEditor, eventBusEditor;
 
 const loadEditorModule = async () => {
-  const module = moduleDevelopment
+  const module =
+    import.meta.env.MODE === 'production' ? await import('../build') : moduleDevelopment;
 
   mountEditor = module.mountEditor;
   unmountEditor = module.unmountEditor;
