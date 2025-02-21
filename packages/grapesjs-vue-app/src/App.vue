@@ -67,39 +67,20 @@ const mountUnmountEditor = () => {
 };
 
 const getMediaList = () => [
-  {
-    imageId: 1175,
-    published: true,
-    displayOrder: 1,
-    imageUrl:
-      'https://affff.tiptopweb.com.au/newsletters/107/small-fdc65e41-c9ec-41f8-9f88-dbdf08585f06.jpg',
-    imageLargeUrl:
-      'https://affff.tiptopweb.com.au/newsletters/107/large-xfdc65e41-c9ec-41f8-9f88-dbdf08585f06.jpg',
-    value:
-      'https://affff.tiptopweb.com.au/newsletters/107/large-xfdc65e41-c9ec-41f8-9f88-dbdf08585f06.jpg',
-    originalName: 'take-a-chance-to-win-pink',
-    label: 'take-a-chance-to-win-pink',
-    mediaType: 60,
-    title: 'compet',
-    col: 6,
-    colSm: 4,
-  },
-  {
-    imageId: 1176,
-    published: true,
-    displayOrder: 2,
-    imageUrl:
-      'https://affff.tiptopweb.com.au/newsletters/107/small-3d538961-5e79-4490-b3f8-5c1436af7534.jpg',
-    imageLargeUrl:
-      'https://affff.tiptopweb.com.au/newsletters/107/large-x3d538961-5e79-4490-b3f8-5c1436af7534.jpg',
-    value:
-      'https://affff.tiptopweb.com.au/newsletters/107/large-x3d538961-5e79-4490-b3f8-5c1436af7534.jpg',
-    originalName: 'AFFFF24_Social_1080x1080px_THE NATURE OF LOVE',
-    label: 'AFFFF24_Social_1080x1080px_THE NATURE OF LOVE',
-    mediaType: 60,
-    col: 0,
-    colSm: 0,
-  },
+  'https://via.placeholder.com/350x250/78c5d6/fff',
+  'https://via.placeholder.com/350x250/459ba8/fff',
+  'https://via.placeholder.com/350x250/79c267/fff',
+  'https://via.placeholder.com/350x250/c5d647/fff',
+  'https://via.placeholder.com/350x250/f28c33/fff',
+  'https://via.placeholder.com/350x250/e868a2/fff',
+  'https://via.placeholder.com/350x250/cc4360/fff',
+  'https://via.placeholder.com/350x250/78c5d6/eee',
+  'https://via.placeholder.com/350x250/459ba8/eee',
+  'https://via.placeholder.com/350x250/79c267/eee',
+  'https://via.placeholder.com/350x250/c5d647/eee',
+  'https://via.placeholder.com/350x250/f28c33/eee',
+  'https://via.placeholder.com/350x250/e868a2/eee',
+  'https://via.placeholder.com/350x250/cc4360/eee'
 ];
 
 const initializeColors = () => {
@@ -137,7 +118,7 @@ const initializeColors = () => {
     '#53BE5B',
   ];
 
-  localStorage.setItem('CURRENT_DOMAIN', 'www.affrenchfilmfestival.org');
+  localStorage.setItem('CURRENT_DOMAIN', 'www.custom-domain.com');
   localStorage.setItem('CURRENT_COLORS_KEY', JSON.stringify(colors));
   localStorage.setItem('MAX_RECORD_SIZE', '50');
 };
